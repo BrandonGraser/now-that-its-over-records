@@ -83,9 +83,9 @@ ul {
 
 /* ---------- Layout ---------- */
 .container {
-  max-width: 960px;
+  max-width: 1200px;
   margin: 0 auto;
-  padding: 0 var(--spacing-md);
+  padding: 0 var(--spacing-lg);
 }
 
 .divider {
@@ -112,50 +112,65 @@ ul {
 /* ============================================
    HEADER
    ============================================ */
+
+/*
+  DESIGN SPEC (from original mockup):
+  - Header is full viewport width, no max-width cap
+  - Logo row: dog icon in a square box (border-right) | giant title text fills remaining space
+  - Both logo row and nav bar have a 2px black border on the bottom
+  - Nav bar: full width, cream bg, 7 links each with flex:1, separated by 2px black right borders
+  - Active/hover link: black bg, cream text
+*/
+
 .site-header {
   background: var(--color-cream);
+  border-bottom: 2px solid var(--color-black);
   position: sticky;
   top: 0;
   z-index: 100;
+  width: 100%;
 }
 
-/* Logo row — constrained to container width */
-.header-inner {
-  max-width: 960px;
-  margin: 0 auto;
-  padding: 0 var(--spacing-md);
-}
-
+/* Logo row — full width, no padding cap */
 .logo-wrap {
   display: flex;
-  align-items: center;
-  gap: 1rem;
-  padding: 0.6rem 0;
+  align-items: stretch;
+  width: 100%;
   border-bottom: 2px solid var(--color-black);
 }
 
+/* Dog icon box — fixed square, bordered on right */
 .logo-icon {
-  width: 56px;
-  height: 56px;
+  display: block;
+  width: 90px;
+  height: 90px;
   object-fit: contain;
+  padding: 8px;
+  border-right: 2px solid var(--color-black);
+  flex-shrink: 0;
+  background: var(--color-cream);
 }
 
+/* Title — fills remaining width, vertically centred */
 .logo-text {
   font-family: var(--font-heading);
-  font-size: clamp(1.4rem, 3vw, 2.2rem);
+  font-size: clamp(2rem, 5.5vw, 4.5rem);
   font-weight: 900;
   text-transform: uppercase;
-  letter-spacing: 0.03em;
+  letter-spacing: 0.01em;
+  line-height: 1;
+  display: flex;
+  align-items: center;
+  padding: 0 1rem;
+  flex: 1;
 }
 
-/* Nav bar — cream bg, black borders, HOME/active inverted */
+/* Nav bar — full width, cream bg, links divided by black borders */
 .main-nav {
   display: flex;
   align-items: stretch;
-  background: var(--color-cream);
   width: 100%;
-  border-top: 2px solid var(--color-black);
-  border-bottom: 2px solid var(--color-black);
+  background: var(--color-black);
 }
 
 .nav-link {
@@ -163,21 +178,17 @@ ul {
   display: flex;
   align-items: center;
   justify-content: center;
-  color: var(--color-black);
-  background: var(--color-cream);
+  color: var(--color-cream);
+  background: var(--color-black);
   font-family: var(--font-body);
-  font-size: 0.68rem;
+  font-size: 0.7rem;
   font-weight: 700;
-  letter-spacing: 0.12em;
+  letter-spacing: 0.1em;
   text-transform: uppercase;
   padding: 0.5rem 0.25rem;
   text-align: center;
-  border-right: 2px solid var(--color-black);
+  border-right: 1px solid #444;
   transition: background 0.15s, color 0.15s;
-}
-
-.nav-link:first-child {
-  border-left: none;
 }
 
 .nav-link:last-child {
@@ -186,8 +197,8 @@ ul {
 
 .nav-link:hover,
 .nav-link.active {
-  background: var(--color-black);
-  color: var(--color-cream);
+  background: var(--color-cream);
+  color: var(--color-black);
 }
 
 /* ============================================
@@ -542,9 +553,14 @@ img[src^="images/"] {
   }
 
   .nav-link {
-    flex: 1 1 25%;
+    flex: 1 1 33%;
     font-size: 0.6rem;
     padding: 0.5rem 0.25rem;
+  }
+
+  .logo-icon {
+    width: 65px;
+    height: 65px;
   }
 
   .diff-grid {
