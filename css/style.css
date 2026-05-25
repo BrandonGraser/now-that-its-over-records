@@ -84,10 +84,10 @@ ul {
 
 .subheading {
   font-family: var(--font-heading);
-  font-size: 1rem;
+  font-size: 1.2rem;
   letter-spacing: 0.05em;
   text-transform: uppercase;
-  margin-top: 0.25rem;
+  margin-top: 0.05rem;
 }
 
 /* ---------- Layout ---------- */
@@ -245,8 +245,9 @@ ul {
 .aim-box {
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
+  align-items: center;
   justify-content: center;
+  text-align: center;
   width: 200px;
   height: 220px;
   border: var(--border);
@@ -260,11 +261,11 @@ ul {
 }
 
 .aim-label {
-  font-family: var(--font-heading);
-  font-weight: 900;
-  font-size: 1.6rem;
+  font-family: var(--font-body);
+  font-weight: 700;
+  font-size: 1.4rem;
   text-transform: uppercase;
-  letter-spacing: 0.01em;
+  letter-spacing: 0.02em;
   line-height: 1;
 }
 
@@ -282,8 +283,10 @@ ul {
   flex-shrink: 0;
 }
 
-.aim-arrow svg {
-  display: block;
+.aim-arrow-img {
+  width: 60px;
+  height: auto;
+  /* placeholder — replace images/arrow.png with your custom arrow image */
 }
 
 /* ============================================
