@@ -93,7 +93,7 @@ ul {
 /* ---------- Layout ---------- */
 .container {
   width: 100%;
-  padding: 0 250px;
+  padding: 0 450px;
 }
 
 .divider {
@@ -389,6 +389,10 @@ ul {
   color: var(--color-white);
 }
 
+.section-channels .container {
+  padding: 0 250px;
+}
+
 .channels-header {
   display: flex;
   align-items: flex-start;
@@ -555,6 +559,10 @@ ul {
   background: var(--color-black);
   padding: var(--spacing-xl) 0;
   color: var(--color-white);
+}
+
+.section-about .container {
+  padding: 0 250px;
 }
 
 .section-about .heading-mad {
