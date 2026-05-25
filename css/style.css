@@ -124,14 +124,13 @@ ul {
 
 .site-header {
   background: var(--color-cream);
-  border-bottom: 2px solid var(--color-black);
   position: sticky;
   top: 0;
   z-index: 100;
   width: 100%;
 }
 
-/* Logo row — full width, no padding cap */
+/* Logo row — full width, single bottom border, no gap */
 .logo-wrap {
   display: flex;
   align-items: stretch;
@@ -139,16 +138,16 @@ ul {
   border-bottom: 2px solid var(--color-black);
 }
 
-/* Dog icon box — fixed square, bordered on right */
+/* Dog icon — tall enough to match header, no background so it blends */
 .logo-icon {
   display: block;
-  width: 90px;
-  height: 90px;
+  width: auto;
+  height: 100px;
   object-fit: contain;
-  padding: 8px;
+  padding: 6px 10px;
   border-right: 2px solid var(--color-black);
   flex-shrink: 0;
-  background: var(--color-cream);
+  background: transparent;
 }
 
 /* Title — stretches to fill full remaining header width */
@@ -167,12 +166,13 @@ ul {
   overflow: hidden;
 }
 
-/* Nav bar — full width, cream bg, links divided by black borders */
+/* Nav bar — full width, black bg, no gap between logo row and nav */
 .main-nav {
   display: flex;
   align-items: stretch;
   width: 100%;
   background: var(--color-black);
+  margin-top: 0;
 }
 
 .nav-link {
@@ -187,9 +187,9 @@ ul {
   font-weight: 700;
   letter-spacing: 0.1em;
   text-transform: uppercase;
-  padding: 0.5rem 0.25rem;
+  padding: 0.6rem 0.25rem;
   text-align: center;
-  border-right: 1px solid #444;
+  border-right: 1px solid #333;
   transition: background 0.15s, color 0.15s;
 }
 
@@ -561,8 +561,8 @@ img[src^="images/"] {
   }
 
   .logo-icon {
-    width: 65px;
-    height: 65px;
+    height: 70px;
+    width: auto;
   }
 
   .diff-grid {
@@ -607,8 +607,8 @@ img[src^="images/"] {
   }
 
   .logo-icon {
-    width: 42px;
-    height: 42px;
+    height: 50px;
+    width: auto;
   }
 
   .artists-tags {
