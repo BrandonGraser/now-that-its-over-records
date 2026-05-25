@@ -17,16 +17,14 @@
   --spacing-xl: 5rem;
 }
 
-/* ---------- Font Face (add MadInk once you have the file) ---------- */
-/*
+/* ---------- Font Face ---------- */
 @font-face {
   font-family: 'MadInk';
-  src: url('../fonts/MadInk.woff2') format('woff2'),
-       url('../fonts/MadInk.woff') format('woff');
+  src: url('../fonts/madink.otf') format('opentype');
   font-weight: normal;
   font-style: normal;
+  font-display: swap;
 }
-*/
 
 /* ---------- Reset & Base ---------- */
 *, *::before, *::after {
@@ -115,13 +113,13 @@ ul {
    HEADER
    ============================================ */
 .site-header {
-  border-bottom: 3px solid var(--color-black);
   background: var(--color-cream);
   position: sticky;
   top: 0;
   z-index: 100;
 }
 
+/* Logo row — constrained to container width */
 .header-inner {
   max-width: 960px;
   margin: 0 auto;
@@ -142,34 +140,36 @@ ul {
   object-fit: contain;
 }
 
-/* Placeholder box for logo image */
-.logo-icon[src="images/logo-dog.png"]:not([src]) {
-  background: #ddd;
-}
-
 .logo-text {
   font-family: var(--font-heading);
-  font-size: clamp(1.2rem, 3vw, 2rem);
+  font-size: clamp(1.4rem, 3vw, 2.2rem);
   font-weight: 900;
   text-transform: uppercase;
   letter-spacing: 0.03em;
 }
 
+/* Nav bar — full width, links evenly fill it */
 .main-nav {
   display: flex;
-  align-items: center;
+  align-items: stretch;
   background: var(--color-black);
+  width: 100%;
+  border-bottom: 3px solid var(--color-black);
 }
 
 .nav-link {
-  display: inline-block;
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   color: var(--color-white);
   font-family: var(--font-body);
-  font-size: 0.7rem;
+  font-size: 0.68rem;
   font-weight: 700;
   letter-spacing: 0.12em;
   text-transform: uppercase;
-  padding: 0.55rem 0.9rem;
+  padding: 0.55rem 0.25rem;
+  text-align: center;
   transition: background 0.15s, color 0.15s;
 }
 
@@ -531,10 +531,9 @@ img[src^="images/"] {
   }
 
   .nav-link {
-    flex: 1 1 auto;
-    text-align: center;
+    flex: 1 1 25%;
     font-size: 0.6rem;
-    padding: 0.5rem 0.5rem;
+    padding: 0.5rem 0.25rem;
   }
 
   .diff-grid {
