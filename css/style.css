@@ -138,7 +138,7 @@ ul {
   border-bottom: 2px solid var(--color-black);
 }
 
-/* Dog icon — tall enough to match header, multiply blends white away */
+/* Dog icon — bg matches site cream exactly so no mismatch */
 .logo-icon {
   display: block;
   width: auto;
@@ -147,8 +147,7 @@ ul {
   padding: 6px 10px;
   border-right: 2px solid var(--color-black);
   flex-shrink: 0;
-  background: transparent;
-  mix-blend-mode: multiply;
+  background: #f4f1eb;
 }
 
 /* Title — stretches to fill full remaining header width */
@@ -167,13 +166,14 @@ ul {
   overflow: hidden;
 }
 
-/* Nav bar — full width, black bg, no gap between logo row and nav */
+/* Nav bar — cream bg, full black borders, active has darker fill */
 .main-nav {
   display: flex;
   align-items: stretch;
   width: 100%;
-  background: var(--color-black);
-  margin-top: 0;
+  background: #f4f1eb;
+  border-top: 2px solid var(--color-black);
+  border-bottom: 2px solid var(--color-black);
 }
 
 .nav-link {
@@ -181,8 +181,8 @@ ul {
   display: flex;
   align-items: center;
   justify-content: center;
-  color: var(--color-cream);
-  background: var(--color-black);
+  color: var(--color-black);
+  background: #f4f1eb;
   font-family: var(--font-body);
   font-size: 0.7rem;
   font-weight: 700;
@@ -190,17 +190,24 @@ ul {
   text-transform: uppercase;
   padding: 0.6rem 0.25rem;
   text-align: center;
-  border-right: 1px solid #333;
-  transition: background 0.15s, color 0.15s;
+  border-right: 2px solid var(--color-black);
+  transition: background 0.15s;
+}
+
+.nav-link:first-child {
+  border-left: none;
 }
 
 .nav-link:last-child {
   border-right: none;
 }
 
-.nav-link:hover,
+.nav-link:hover {
+  background: #dedad2;
+}
+
 .nav-link.active {
-  background: var(--color-cream);
+  background: #dedad2;
   color: var(--color-black);
 }
 
