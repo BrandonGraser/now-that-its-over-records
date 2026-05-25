@@ -1,0 +1,589 @@
+/* ============================================
+   NOW THAT ITS OVER RECORDS — Main Stylesheet
+   ============================================ */
+
+/* ---------- CSS Custom Properties ---------- */
+:root {
+  --color-black: #0a0a0a;
+  --color-white: #f4f1eb;
+  --color-cream: #f4f1eb;
+  --color-dark-section: #111111;
+  --font-heading: 'MadInk', 'Impact', fantasy;
+  --font-body: 'Arial', sans-serif;
+  --border: 2px solid var(--color-black);
+  --spacing-sm: 0.75rem;
+  --spacing-md: 1.5rem;
+  --spacing-lg: 3rem;
+  --spacing-xl: 5rem;
+}
+
+/* ---------- Font Face (add MadInk once you have the file) ---------- */
+/*
+@font-face {
+  font-family: 'MadInk';
+  src: url('../fonts/MadInk.woff2') format('woff2'),
+       url('../fonts/MadInk.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+*/
+
+/* ---------- Reset & Base ---------- */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--color-cream);
+  color: var(--color-black);
+  font-family: var(--font-body);
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+/* ---------- Typography ---------- */
+.heading-mad {
+  font-family: var(--font-heading);
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+  line-height: 1;
+}
+
+.heading-mad--white {
+  color: var(--color-white);
+}
+
+.subheading {
+  font-family: var(--font-body);
+  font-size: 0.75rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  margin-top: 0.25rem;
+}
+
+/* ---------- Layout ---------- */
+.container {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 0 var(--spacing-md);
+}
+
+.divider {
+  border: none;
+  border-top: 1.5px solid #ccc;
+  margin: 0 auto;
+  max-width: 960px;
+}
+
+.section-title-row {
+  text-align: center;
+  margin-bottom: var(--spacing-lg);
+}
+
+.section-title-row .heading-mad {
+  font-size: clamp(2rem, 5vw, 3.5rem);
+}
+
+.asterisk {
+  display: inline-block;
+  font-style: normal;
+}
+
+/* ============================================
+   HEADER
+   ============================================ */
+.site-header {
+  border-bottom: 3px solid var(--color-black);
+  background: var(--color-cream);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.header-inner {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 0 var(--spacing-md);
+}
+
+.logo-wrap {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 0.6rem 0;
+  border-bottom: 2px solid var(--color-black);
+}
+
+.logo-icon {
+  width: 56px;
+  height: 56px;
+  object-fit: contain;
+}
+
+/* Placeholder box for logo image */
+.logo-icon[src="images/logo-dog.png"]:not([src]) {
+  background: #ddd;
+}
+
+.logo-text {
+  font-family: var(--font-heading);
+  font-size: clamp(1.2rem, 3vw, 2rem);
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+}
+
+.main-nav {
+  display: flex;
+  align-items: center;
+  background: var(--color-black);
+}
+
+.nav-link {
+  display: inline-block;
+  color: var(--color-white);
+  font-family: var(--font-body);
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  padding: 0.55rem 0.9rem;
+  transition: background 0.15s, color 0.15s;
+}
+
+.nav-link:hover,
+.nav-link.active {
+  background: var(--color-white);
+  color: var(--color-black);
+}
+
+/* ============================================
+   WHAT WE AIM
+   ============================================ */
+.section-aim {
+  padding: var(--spacing-xl) 0 var(--spacing-lg);
+}
+
+.aim-flow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.25rem;
+  flex-wrap: wrap;
+}
+
+.aim-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 160px;
+  height: 100px;
+  border: var(--border);
+  padding: 1rem;
+  gap: 0.3rem;
+}
+
+.aim-box--dark {
+  background: var(--color-black);
+  color: var(--color-white);
+}
+
+.aim-label {
+  font-family: var(--font-body);
+  font-weight: 700;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+.aim-sub {
+  font-family: var(--font-body);
+  font-size: 0.7rem;
+  letter-spacing: 0.05em;
+}
+
+.aim-arrow {
+  font-size: 1.5rem;
+  font-weight: 400;
+}
+
+/* ============================================
+   WHAT WE DO DIFFERENT
+   ============================================ */
+.section-different {
+  padding: var(--spacing-lg) 0 var(--spacing-xl);
+}
+
+.diff-title-row {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  margin-bottom: var(--spacing-lg);
+}
+
+.diff-title-row .heading-mad {
+  font-size: clamp(1.8rem, 4.5vw, 3rem);
+}
+
+.diff-icon {
+  width: 60px;
+  height: auto;
+  flex-shrink: 0;
+}
+
+/* Image placeholder */
+.diff-icon[src$=".png"] {
+  min-width: 60px;
+  min-height: 60px;
+  background: #e0e0e0;
+}
+
+.diff-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+}
+
+.diff-card {
+  border: var(--border);
+  padding: 1.25rem;
+}
+
+.diff-tag {
+  display: block;
+  font-family: var(--font-body);
+  font-size: 0.65rem;
+  letter-spacing: 0.1em;
+  margin-bottom: 0.4rem;
+  color: #555;
+}
+
+.diff-card-title {
+  font-family: var(--font-body);
+  font-weight: 700;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  margin-bottom: 0.5rem;
+}
+
+.diff-card p {
+  font-size: 0.78rem;
+  line-height: 1.5;
+}
+
+/* ============================================
+   OUR CREATIVE CHANNELS
+   ============================================ */
+.section-channels {
+  background: var(--color-black);
+  padding: var(--spacing-xl) 0;
+  color: var(--color-white);
+}
+
+.channels-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin-bottom: var(--spacing-lg);
+}
+
+.channels-header .heading-mad {
+  font-size: clamp(2rem, 5vw, 3.5rem);
+}
+
+.channels-cloud {
+  width: 100px;
+  height: auto;
+  opacity: 0.9;
+}
+
+.channels-cloud[src$=".png"] {
+  min-width: 100px;
+  min-height: 70px;
+  background: #333;
+}
+
+.channels-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+
+.channel-card {
+  display: flex;
+  gap: 0.75rem;
+  align-items: flex-start;
+}
+
+.channel-thumb {
+  width: 80px;
+  height: 80px;
+  flex-shrink: 0;
+  border: 2px solid var(--color-white);
+  background: #2a2a2a;
+  overflow: hidden;
+}
+
+.channel-thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.channel-name {
+  font-family: var(--font-body);
+  font-weight: 700;
+  font-size: 0.8rem;
+  letter-spacing: 0.1em;
+}
+
+.channel-type {
+  font-size: 0.65rem;
+  letter-spacing: 0.1em;
+  margin: 0.15rem 0;
+  color: #aaa;
+}
+
+.channel-desc {
+  font-size: 0.7rem;
+  line-height: 1.5;
+  color: #ccc;
+}
+
+/* ============================================
+   OUR MARKETING + ARTISTS
+   ============================================ */
+.section-marketing {
+  padding: var(--spacing-xl) 0 var(--spacing-lg);
+}
+
+.marketing-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--spacing-xl);
+  align-items: start;
+}
+
+.marketing-col .heading-mad,
+.artists-col .heading-mad {
+  font-size: clamp(1.5rem, 3.5vw, 2.5rem);
+  margin-bottom: var(--spacing-md);
+}
+
+.marketing-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.marketing-item {
+  border: var(--border);
+  padding: 0.75rem 1rem;
+  font-family: var(--font-body);
+  font-weight: 700;
+  font-size: 0.75rem;
+  letter-spacing: 0.1em;
+}
+
+.artists-tags {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.artist-tag {
+  border: var(--border);
+  padding: 0.6rem 0.75rem;
+  font-family: var(--font-body);
+  font-weight: 700;
+  font-size: 0.75rem;
+  letter-spacing: 0.1em;
+  text-align: center;
+}
+
+.artists-flower {
+  width: 70px;
+  height: auto;
+}
+
+.artists-flower[src$=".png"] {
+  min-width: 70px;
+  min-height: 70px;
+  background: transparent;
+}
+
+/* ============================================
+   WHY WORK WITH US
+   ============================================ */
+.section-why {
+  padding: var(--spacing-xl) 0;
+}
+
+.section-why .section-title-row .heading-mad {
+  font-size: clamp(2rem, 5vw, 3.5rem);
+}
+
+.why-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.5rem;
+}
+
+.why-item {
+  border: var(--border);
+  padding: 0.75rem 1rem;
+  font-family: var(--font-body);
+  font-weight: 700;
+  font-size: 0.75rem;
+  letter-spacing: 0.1em;
+  text-align: center;
+}
+
+/* ============================================
+   ABOUT US
+   ============================================ */
+.section-about {
+  background: var(--color-black);
+  padding: var(--spacing-xl) 0;
+  color: var(--color-white);
+}
+
+.section-about .heading-mad {
+  font-size: clamp(2rem, 5vw, 3.5rem);
+  margin-bottom: var(--spacing-md);
+}
+
+.about-body {
+  font-size: 0.95rem;
+  line-height: 1.7;
+  max-width: 560px;
+}
+
+.about-body strong {
+  font-weight: 700;
+}
+
+/* ============================================
+   FOOTER
+   ============================================ */
+.site-footer {
+  background: var(--color-cream);
+  border-top: 2px solid var(--color-black);
+  text-align: center;
+  padding: var(--spacing-md) 0;
+}
+
+.footer-name {
+  font-family: var(--font-heading);
+  font-size: 1.1rem;
+  letter-spacing: 0.1em;
+  font-weight: 900;
+}
+
+.footer-copy {
+  font-family: var(--font-body);
+  font-size: 0.65rem;
+  letter-spacing: 0.12em;
+  color: #555;
+  margin-top: 0.2rem;
+}
+
+/* ============================================
+   IMAGE PLACEHOLDERS
+   (replace with real images — remove this block)
+   ============================================ */
+img[src^="images/"] {
+  background-color: #ddd;
+  min-height: 40px;
+}
+
+/* ============================================
+   RESPONSIVE
+   ============================================ */
+@media (max-width: 768px) {
+  .main-nav {
+    flex-wrap: wrap;
+  }
+
+  .nav-link {
+    flex: 1 1 auto;
+    text-align: center;
+    font-size: 0.6rem;
+    padding: 0.5rem 0.5rem;
+  }
+
+  .diff-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .channels-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .marketing-grid {
+    grid-template-columns: 1fr;
+    gap: var(--spacing-lg);
+  }
+
+  .why-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .aim-flow {
+    flex-direction: column;
+  }
+
+  .aim-arrow {
+    transform: rotate(90deg);
+  }
+
+  .diff-title-row {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .channels-header {
+    flex-direction: column;
+    gap: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .logo-text {
+    font-size: 1rem;
+  }
+
+  .logo-icon {
+    width: 42px;
+    height: 42px;
+  }
+
+  .artists-tags {
+    grid-template-columns: 1fr;
+  }
+}
