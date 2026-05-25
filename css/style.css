@@ -138,7 +138,7 @@ ul {
   border-bottom: 2px solid var(--color-black);
 }
 
-/* Dog icon — tall enough to match header, no background so it blends */
+/* Dog icon — tall enough to match header, multiply blends white away */
 .logo-icon {
   display: block;
   width: auto;
@@ -148,6 +148,7 @@ ul {
   border-right: 2px solid var(--color-black);
   flex-shrink: 0;
   background: transparent;
+  mix-blend-mode: multiply;
 }
 
 /* Title — stretches to fill full remaining header width */
