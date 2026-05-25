@@ -110,7 +110,7 @@ ul {
 }
 
 .section-title-row .heading-mad {
-  font-size: clamp(2rem, 5vw, 3.5rem);
+  font-size: clamp(3rem, 6vw, 6rem);
 }
 
 .asterisk {
@@ -125,6 +125,11 @@ ul {
   object-fit: contain;
   vertical-align: middle;
   margin-left: 0.25rem;
+}
+
+.aim-title-wrap {
+  display: inline-block;
+  text-align: center;
 }
 
 /* ============================================
@@ -241,6 +246,19 @@ ul {
    ============================================ */
 .section-aim {
   padding: var(--spacing-xl) 0 var(--spacing-lg);
+  text-align: center;
+}
+
+.section-aim .section-title-row {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.section-aim .heading-mad {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
 }
 
 .aim-flow {
@@ -308,12 +326,14 @@ ul {
 .diff-title-row {
   display: flex;
   align-items: center;
+  justify-content: center;
   gap: 1.5rem;
   margin-bottom: var(--spacing-lg);
+  text-align: center;
 }
 
 .diff-title-row .heading-mad {
-  font-size: clamp(1.8rem, 4.5vw, 3rem);
+  font-size: clamp(3rem, 6vw, 6rem);
 }
 
 .diff-icon {
@@ -378,7 +398,7 @@ ul {
 }
 
 .channels-header .heading-mad {
-  font-size: clamp(2rem, 5vw, 3.5rem);
+  font-size: clamp(3rem, 6vw, 6rem);
 }
 
 .channels-cloud {
@@ -455,8 +475,9 @@ ul {
 
 .marketing-col .heading-mad,
 .artists-col .heading-mad {
-  font-size: clamp(1.5rem, 3.5vw, 2.5rem);
+  font-size: clamp(3rem, 4vw, 6rem);
   margin-bottom: var(--spacing-md);
+  text-align: center;
 }
 
 .marketing-list {
@@ -509,7 +530,7 @@ ul {
 }
 
 .section-why .section-title-row .heading-mad {
-  font-size: clamp(2rem, 5vw, 3.5rem);
+  font-size: clamp(3rem, 6vw, 6rem);
 }
 
 .why-grid {
@@ -538,7 +559,7 @@ ul {
 }
 
 .section-about .heading-mad {
-  font-size: clamp(2rem, 5vw, 3.5rem);
+  font-size: clamp(3rem, 6vw, 6rem);
   margin-bottom: var(--spacing-md);
 }
 
