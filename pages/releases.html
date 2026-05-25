@@ -9,6 +9,17 @@
 </head>
 <body>
 <div class="site-wrap">
+
+<!-- Hand-drawn border filter -->
+<svg xmlns="http://www.w3.org/2000/svg" width="0" height="0" style="position:absolute">
+  <defs>
+    <filter id="hand-drawn" x="-5%" y="-5%" width="110%" height="110%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.02" numOctaves="3" seed="2" result="noise"/>
+      <feDisplacementMap in="SourceGraphic" in2="noise" scale="2.5" xChannelSelector="R" yChannelSelector="G"/>
+    </filter>
+  </defs>
+</svg>
+
   <header class="site-header">
     <div class="logo-wrap">
       <img src="../images/logo-dog.png" alt="Now That Its Over Records logo" class="logo-icon" />

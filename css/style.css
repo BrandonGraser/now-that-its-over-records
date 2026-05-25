@@ -17,6 +17,11 @@
   --spacing-xl: 5rem;
 }
 
+/* ---- Hand-drawn SVG filter ---- */
+.site-wrap {
+  filter: url(#hand-drawn);
+}
+
 /* ---------- Font Face ---------- */
 @font-face {
   font-family: 'MadInk';
