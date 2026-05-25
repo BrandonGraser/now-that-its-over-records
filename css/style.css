@@ -9,7 +9,7 @@
   --color-cream: #f4f1eb;
   --color-dark-section: #111111;
   --font-heading: 'MadInk', 'Impact', fantasy;
-  --font-body: 'Arial', sans-serif;
+  --font-body: 'acumin-pro', sans-serif;
   --border: 2px solid var(--color-black);
   --spacing-sm: 0.75rem;
   --spacing-md: 1.5rem;
@@ -203,6 +203,7 @@ ul {
   text-align: center;
   border-right: 2px solid var(--color-black);
   transition: background 0.15s;
+  transform: scaleY(1.1);
 }
 
 .nav-link:first-child {
