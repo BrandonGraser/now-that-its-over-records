@@ -120,8 +120,8 @@ ul {
 
 .inline-star {
   display: inline-block;
-  width: 2.5rem;
-  height: 2.5rem;
+  width: 3.375rem;
+  height: 3.375rem;
   object-fit: contain;
   vertical-align: middle;
   margin-left: 0.25rem;
@@ -322,11 +322,9 @@ ul {
   flex-shrink: 0;
 }
 
-/* Image placeholder */
 .diff-icon[src$=".png"] {
   min-width: 60px;
   min-height: 60px;
-  background: #e0e0e0;
 }
 
 .diff-grid {
@@ -384,15 +382,14 @@ ul {
 }
 
 .channels-cloud {
-  width: 100px;
+  width: 130px;
   height: auto;
   opacity: 0.9;
 }
 
 .channels-cloud[src$=".png"] {
-  min-width: 100px;
-  min-height: 70px;
-  background: #333;
+  min-width: 130px;
+  min-height: 91px;
 }
 
 .channels-grid {
@@ -495,14 +492,13 @@ ul {
 }
 
 .artists-flower {
-  width: 70px;
+  width: 91px;
   height: auto;
 }
 
 .artists-flower[src$=".png"] {
-  min-width: 70px;
-  min-height: 70px;
-  background: transparent;
+  min-width: 91px;
+  min-height: 91px;
 }
 
 /* ============================================
