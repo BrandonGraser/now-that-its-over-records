@@ -5,8 +5,8 @@
 /* ---------- CSS Custom Properties ---------- */
 :root {
   --color-black: #0a0a0a;
-  --color-white: #f4f1eb;
-  --color-cream: #f4f1eb;
+  --color-white: #ffffff;
+  --color-cream: #ffffff;
   --color-dark-section: #111111;
   --font-heading: 'MadInk', 'Impact', fantasy;
   --font-body: 'acumin-pro', sans-serif;
@@ -120,8 +120,8 @@ ul {
 
 .inline-star {
   display: inline-block;
-  width: 3.375rem;
-  height: 3.375rem;
+  width: 5.0625rem;
+  height: 5.0625rem;
   object-fit: contain;
   vertical-align: middle;
   margin-left: 0.25rem;
@@ -167,7 +167,7 @@ ul {
   padding: 6px 10px;
   border-right: 2px solid var(--color-black);
   flex-shrink: 0;
-  background: #f4f1eb;
+  background: #ffffff;
 }
 
 /* Title — fills full remaining width */
@@ -192,7 +192,7 @@ ul {
   display: flex;
   align-items: stretch;
   width: 100%;
-  background: #f4f1eb;
+  background: #ffffff;
   border-bottom: 2px solid var(--color-black);
 }
 
@@ -202,7 +202,7 @@ ul {
   align-items: center;
   justify-content: center;
   color: var(--color-black);
-  background: #f4f1eb;
+  background: #ffffff;
   font-family: var(--font-body);
   font-size: 0.82rem;
   font-weight: 700;
@@ -492,13 +492,13 @@ ul {
 }
 
 .artists-flower {
-  width: 91px;
+  width: 114px;
   height: auto;
 }
 
 .artists-flower[src$=".png"] {
-  min-width: 91px;
-  min-height: 91px;
+  min-width: 114px;
+  min-height: 114px;
 }
 
 /* ============================================
