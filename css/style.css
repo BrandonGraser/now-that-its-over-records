@@ -168,7 +168,7 @@ ul {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 0.2rem 0.5rem;
+  padding: 17px 0.5rem 0.2rem;
   flex: 1;
   white-space: nowrap;
   overflow: hidden;
