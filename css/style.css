@@ -158,7 +158,7 @@ ul {
   background: #f4f1eb;
 }
 
-/* Title — fills full remaining width by scaling with viewport */
+/* Title — fills full remaining width */
 .logo-text {
   font-family: var(--font-heading);
   font-weight: 900;
@@ -171,8 +171,7 @@ ul {
   flex: 1;
   white-space: nowrap;
   overflow: hidden;
-  /* Scale font so text fills the full container width */
-  font-size: clamp(1.5rem, 6.5vw, 99rem);
+  font-size: clamp(2rem, 7vw, 99rem);
 }
 
 /* Nav bar — cream bg, full black borders, active has darker fill */
