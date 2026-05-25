@@ -4,6 +4,21 @@
 
 document.addEventListener('DOMContentLoaded', () => {
 
+  // ---- Scale header title to fill full available width ----
+  function fitLogoText() {
+    const el = document.querySelector('.logo-text');
+    if (!el) return;
+    // Reset first
+    el.style.fontSize = '10px';
+    const available = el.parentElement.clientWidth - (el.parentElement.querySelector('.logo-icon')?.offsetWidth || 0);
+    const ratio = available / el.scrollWidth;
+    el.style.fontSize = (10 * ratio * 0.97) + 'px'; // 0.97 = slight breathing room
+  }
+
+  fitLogoText();
+  window.addEventListener('resize', fitLogoText);
+
+
   // ---- Active nav link ----
   const currentPath = window.location.pathname.split('/').pop() || 'index.html';
   document.querySelectorAll('.nav-link').forEach(link => {
